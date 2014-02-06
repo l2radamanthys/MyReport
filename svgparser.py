@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import copy
 from xml.dom import minidom
 
 import figures
@@ -10,7 +11,7 @@ class Parser:
         self.data = minidom.parse(file)
         self.rects = []
         self.labels = []
-
+        self.pages = []
 
 
     def rect_style_parse(self, rect, string):
@@ -40,7 +41,7 @@ class Parser:
         style = string.split(";")
         for ele in style:
             key,value = ele.split(":")
-            print key,value
+            #print key,value
             if key == "font-size":
                 label.size = float(value[:2]) * PT
 
@@ -50,11 +51,7 @@ class Parser:
             if key == "fill":
                 label.bg = value
 
-        print
-
         return label
-
-
 
 
     def parse_rect(self, rect):
@@ -89,14 +86,90 @@ class Parser:
             self.parse_label(label)
 
 
+    def find_label_by_id(self, _id):
+        """
+            busca un objecto label mediante su clave, devuelve
+            el primer con ella
+        """
+        search = True
+        i = 0
+        while search:
+            if i == len(self.labels):
+                break;
+
+            if self.labels[i].id == _id:
+                return self.labels[i]
+                search = False
+            #print self.labels[i].id
+            i += 1
+        if search:
+            return None
+
+
+    def set_index(self, list):
+        """
+            Define las Etiqueta como indice, osea etiquetas que no se dibujaran
+        """
+        for key in list:
+            self.find_label_by_id(key).index = True
+
+
+
+    def find_label_by_text(self, txt):
+        pass
+
+
+    def list_parse(self, data, link, end_id=None, space=0):
+        """
+            Parsea una lista de Valores creando los Elementos Correspondientes
+        """
+        _id = link[0][0]
+        obj = self.find_label_by_id(_id)
+        start = obj.y
+        delta = obj.size + space
+        #finaliza?
+        if end_id == None:
+            end = 0
+        else:
+            end = self.find_label_by_id(end_id).y
+
+        objs = []
+        for key in link:
+            print key
+            e = self.find_label_by_id(key[0])
+            objs.append(e)
+
+        #tocar con alambre esto, funciona pero no meter mano
+        y  = start
+        k = 0 #random.randint(1,5000)
+        self.pages = [[]]
+        c = 0
+        for row in data:
+            #probaremos solo la primera fila
+            for i in range(len(objs)):
+                lbl = copy.copy(objs[i])
+                lbl.y = y
+                lbl.id = lbl.id +'_field_'+ str(k)
+                lbl.index = False
+                lbl.text = row[i]
+                k += 1
+                self.pages[c].append(lbl)
+            y = y - delta
+            if y <= end:
+                self.pages.append([])
+                y = start
+                c += 1
+
+
+
+
     def draw(self, canvas):
-        for rect in self.rects:
-            print rect
-            rect.draw(canvas)
-        for label in self.labels:
-            print label
-            label.draw(canvas)
-
-
-
+        for page in self.pages:
+            for rect in self.rects:
+                rect.draw(canvas)
+            for label in self.labels:
+                label.draw(canvas)
+            for label in page:
+                label.draw(canvas)
+            canvas.showPage()
 

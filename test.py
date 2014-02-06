@@ -10,7 +10,7 @@ from globals import A4
 #Test found
 if __name__ == '__main__':
     pdf = Parser('samples/text-model.svg')
-    canva = canvas.Canvas('out.pdf', pagesize=A4)
+    canva = canvas.Canvas('samples/text-model.pdf', pagesize=A4)
     pdf.parse()
     pdf.draw(canva)
     canva.save()
