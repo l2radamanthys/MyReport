@@ -10,3 +10,9 @@ Thumbs.db
 
 #Python
 *.pyc
+
+#vim
+*.swp
+
+*.pdf
+

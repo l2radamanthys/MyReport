@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="list-body.svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     inkscape:document-units="mm"
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="641.59366"
+     inkscape:cy="812.38597"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="62.85714"
+       y="104.50507"
+       id="field1"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text2987"><tspan
+         sodipodi:role="line"
+         id="tspan2989"
+         x="62.85714"
+         y="104.50507">field1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="511.42853"
+       y="104.50507"
+       id="field2"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text2991"><tspan
+         sodipodi:role="line"
+         id="tspan2993"
+         x="511.42853"
+         y="104.50507">field2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="609.71429"
+       y="104.50507"
+       id="field3"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text2995"><tspan
+         sodipodi:role="line"
+         id="tspan2997"
+         x="609.71429"
+         y="104.50507">field3</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect2999"
+       width="661.42859"
+       height="944.36426"
+       x="41.42857"
+       y="50.362183" />
+    <rect
+       y="50.362183"
+       x="497.73953"
+       height="944.36426"
+       width="98.8312"
+       id="rect3001"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-miterlimit:4;stroke-dasharray:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:0;stroke:none;font-family:Sans;-inkscape-font-specification:Sans;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       x="64.285713"
+       y="970.93359"
+       id="end"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3771"><tspan
+         sodipodi:role="line"
+         id="tspan3773"
+         x="64.285713"
+         y="970.93359">end</tspan></text>
+  </g>
+</svg>
