@@ -99,6 +99,7 @@ class Label(Figure):
         self.y = self.y * PT
         self.size = self.size * PT
 
+
     def draw(self, canvas):
         #si es una etiqueta indice no se dibujara
         if not self.index:

@@ -51,13 +51,23 @@ class Section:
             key,value = ele.split(":")
             #print key,value
             if key == "font-size":
-                label.size = float(value[:2]) * PT
+                value = float(value[:-2])
+                #print value
+                #value = round(value)
+                label.size = value * PT
+                print label.text, value, PT, label.size
+
+            if key == "font-style": #peso
+                pass
 
             if key == "font-weight":
                 pass
 
             if key == "fill":
                 label.bg = value
+
+            if key == "font-family":
+                pass
 
         return label
 
