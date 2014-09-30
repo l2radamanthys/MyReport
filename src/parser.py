@@ -282,10 +282,11 @@ class Document:
 
 def initialize():
     """
-        Inicializacion de la configuracion
+        Inicializacion de la configuracion, y carga por ejemplo de las Fuentes
+        definidas por el usuario.
     """
     #carga las fuente del usuario
     for family in USER_FONTS:
         for font in USER_FONTS[family]:
             name, path = USER_FONTS[family][font]
-            pdfmetrics.registerFont(TTFont(name, path))
+            pdfmetrics.registerFo)nt(TTFont(name, path))
