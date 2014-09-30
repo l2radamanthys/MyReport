@@ -99,6 +99,12 @@ class Label(Figure):
         self.y = self.y * PT
         self.size = self.size * PT
 
+        #otros estilo
+        self.style = 'normal'
+        self.weight = 'normal'
+        self.stretch = 'normal'
+        self.align = 'left'
+
 
     def draw(self, canvas):
         #si es una etiqueta indice no se dibujara

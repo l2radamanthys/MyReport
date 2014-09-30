@@ -6,11 +6,14 @@ import random
 from xml.dom import minidom
 
 import reportlab
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
 
 import figures
-from tools import canvas_reset
-from globals import PT, A4
+from tools import canvas_reset, get_font_family
+from globals import PT, A4, USER_FONTS
+
 
 
 class Section:
@@ -52,22 +55,27 @@ class Section:
             #print key,value
             if key == "font-size":
                 value = float(value[:-2])
-                #print value
-                #value = round(value)
                 label.size = value * PT
-                print label.text, value, PT, label.size
 
             if key == "font-style": #peso
-                pass
+                label.style = value
 
             if key == "font-weight":
-                pass
+                label.weight = value
+
+            if key == "font-strech":
+                label.strech = value
+
+            if key == 'text-align':
+                label.align = value
 
             if key == "fill":
                 label.bg = value
 
             if key == "font-family":
-                pass
+                label.font = value
+
+        label.font = get_font_family(label.font, label.weight, label.style)
 
         return label
 
@@ -270,3 +278,14 @@ class Document:
         """
         self.canvas.save()
 
+
+
+def initialize():
+    """
+        Inicializacion de la configuracion
+    """
+    #carga las fuente del usuario
+    for family in USER_FONTS:
+        for font in USER_FONTS[family]:
+            name, path = USER_FONTS[family][font]
+            pdfmetrics.registerFont(TTFont(name, path))
