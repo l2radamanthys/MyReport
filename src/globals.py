@@ -69,5 +69,5 @@ USER_FONTS = {
 }
 
 #Fuente por Defecto deprecate 
-#FONTFAMILY = FONTS['Helvetica']['bold'] #Fuente Por Defecto
+FONTFAMILY = FONTS['Helvetica']['bold'] #Fuente Por Defecto
 

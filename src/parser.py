@@ -289,4 +289,4 @@ def initialize():
     for family in USER_FONTS:
         for font in USER_FONTS[family]:
             name, path = USER_FONTS[family][font]
-            pdfmetrics.registerFo)nt(TTFont(name, path))
+            pdfmetrics.registerFont(TTFont(name, path))
